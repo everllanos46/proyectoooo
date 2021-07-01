@@ -1,0 +1,41 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Solicitudes</h4>
+        </div>
+        <div class="card-body">
+          <div>
+            <select class="form-control" style="height: 40px; width: 265px;" 
+              name="estadoSolicitud" id="estadoSolicitud">
+              <option value="SI">Aceptados</option>
+              <option value="NO">No aceptados</option>
+              <option value="NO REVISADO">Sin revisar</option>
+            </select>
+          </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                  <th>
+                      Codigo
+                  </th>
+                <th>
+                  Asignatura
+                </th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let plan of planesViejos; index as i ">
+                  <td> 
+                    <a >{{plan.codigoPlan}}</a>
+                  </td>
+                  <td>{{plan.asignatura.nombreAsignatura}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

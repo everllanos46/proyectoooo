@@ -1,0 +1,54 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card" style="margin-left: 25%;">
+        <div class="card-header">
+          <h5 class="title">Solicitud</h5>
+        </div>
+        <div class="card-body">
+          <form>
+            <div>
+              <button class="btn btn-primary" (click)="bandera2()">Datos Plan</button>
+            </div>
+            <div *ngIf="!form2">
+              <label for="">Código plan</label>
+              <input name="codigoplan" type="text" class="form-control" [(ngModel)]="plan.codigoPlan">
+              <label for="">Descripción</label>
+              <textarea rows="4" cols="80" class="form-control" name="descripcion" type="text"
+                [(ngModel)]="plan.descripcion"></textarea>
+              <label for="">Presentación</label>
+              <textarea rows="4" cols="80" class="form-control" name="presentacion" type="text"
+                [(ngModel)]="plan.presentacion"></textarea>
+              <label for="">Justificación</label>
+              <textarea rows="4" cols="80" class="form-control" name="justificacion" type="text"
+                [(ngModel)]="plan.justificacion"></textarea>
+              <label for="">Competencias Generales</label>
+              <textarea rows="4" cols="80" class="form-control" name="competenciasgrales" type="text"
+                [(ngModel)]="plan.competenciasGrales"></textarea>
+              <label for="">Competencias Específicas</label>
+              <textarea rows="4" cols="80" class="form-control" name="competenciasespecificas" type="text"
+                [(ngModel)]="plan.competenciasEspecificas"></textarea>
+              <label for="">Objetivo General</label>
+              <textarea rows="4" cols="80" name="objetivogral" type="text" class="form-control"
+                [(ngModel)]="plan.objetivoGeneral"></textarea>
+              <label for="">Contenido</label>
+              <textarea rows="4" cols="80" name="contenido" type="text" class="form-control"
+                [(ngModel)]="plan.contenido"></textarea>
+              <label for="">Metodologías</label>
+              <textarea rows="4" cols="80" name="metodologias" type="text" class="form-control"
+                [(ngModel)]="plan.metodologias"></textarea>
+              <label for="">Objetivo Específico</label>
+              <textarea rows="4" cols="80" name="objetivosespecificos" type="text" class="form-control"
+                [(ngModel)]="plan.objetivosEspecificos"></textarea>
+              <label for="">Estrategias</label>
+              <textarea rows="4" cols="80" name="estrategias" [(ngModel)]="plan.estrategias" type="text"
+                class="form-control"></textarea>
+            </div>
+
+            <button type="button" class="btn btn-danger" (click)="guardar()">Hacer Solicitud</button>
+            
+          </form>
+        </div>
+      </div>

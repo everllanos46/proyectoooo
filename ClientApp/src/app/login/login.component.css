@@ -1,0 +1,11 @@
+body{
+    background-size: cover;
+    background-image: url(../../assets/img/17016.jpg);
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    filter: blur(4px);
+}

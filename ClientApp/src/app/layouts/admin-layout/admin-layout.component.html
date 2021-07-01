@@ -1,0 +1,19 @@
+<div >
+    <div *ngIf="!userLogged;else logged">
+        <app-login (eventLogin)="cambiarEstado($event)"></app-login>
+    </div>
+    <ng-template #logged>
+        <div class="wrapper">
+            <div class="sidebar" data-color="red">
+                <app-sidebar></app-sidebar>
+            </div>
+            <div class="main-panel">
+                <app-navbar (eventLogout)="cambiarEstado($event)"></app-navbar>
+                <router-outlet></router-outlet>
+                <app-footer></app-footer>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+
